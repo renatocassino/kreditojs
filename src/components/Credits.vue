@@ -1,20 +1,37 @@
 <template>
   <div ref="wrap" class="wrap">
     <div ref="content" class="content">
-      Credits man<br />
-      <div v-for="i in Array.from(Array(200).keys())" v-bind:key="i">
-        {{i}} foi
-      </div>
+      <Title>Cast</Title>
+      <centered-data :values="values" />
+
+      <Title>External Support</Title>
+
+      <div>Jovani Jerde</div>
+      <div>Raheem Hoeger</div>
+      <div>Alec Runte</div>
+      <div>Wolf Raynor</div>
+      <div>Edgardo Lang</div>
+      <div>Garnett Marquis</div>
+      <div>Maverick Fay</div>
+      <div>Murray Mossie Route</div>
+      <div>Demond Schimmel</div>
     </div>
   </div>
 </template>
 
 <script>
 import { ref, onMounted } from 'vue';
+import Title from '@/components/Title.vue';
+import CenteredData from '@/components/CenteredData.vue';
+import { secondsPerNumberOfPixels } from '@/helpers/sliderCalcs';
 
-const velocity = 1000;
+const pixelsPerSeconds = 60;
 
 export default {
+  components: {
+    Title,
+    CenteredData,
+  },
   setup() {
     const content = ref(null);
     const wrap = ref(null);
@@ -23,14 +40,29 @@ export default {
       const divWrap = wrap.value;
       const divContent = content.value;
 
-      divContent.style.height = `${divContent.scrollHeight}px`;
-      divContent.style.transition = `${(divContent.scrollHeight / velocity) * 100}s transform linear`;
-      divContent.style.transform = `translateY(-${divContent.scrollHeight + divWrap.scrollHeight}px)`;
+      const endPosition = divContent.scrollHeight + divWrap.scrollHeight;
+      const startPosition = divWrap.scrollHeight;
+      const distanceToRoll = startPosition + endPosition;
+
+      divContent.style.transform = `translateY(${startPosition}px)`;
+      console.log(divWrap.scrollHeight);
+      divContent.style.opacity = 1;
+      divContent.style.transition = `${secondsPerNumberOfPixels(distanceToRoll, pixelsPerSeconds)}s transform linear`;
+      divContent.style.transform = `translateY(-${endPosition}px)`;
     });
 
     return {
       content,
       wrap,
+      values: [
+        ['Design', ['Felipe Luize', 'Anna Waack']],
+        ['Development', ['Renato Cassino', 'Igor Canedo', 'Lages', 'João Paulo']],
+        ['Sound Producer', 'Molla (Carlos Cassino)'],
+        ['P.O.', 'Juliana Soraes'],
+        ['S.M.', 'Lilian'],
+        ['Python GOD', 'Alen'],
+        ['Dess Code Reference', 'Gustav'],
+      ],
     };
   },
 };
@@ -41,7 +73,7 @@ $sizeOfBackground: 30vh;
 
 .wrap {
   position: relative;
-  max-height: 100%;
+  height: 100%;
   overflow: hidden;
 
   &::before {
@@ -77,7 +109,7 @@ $sizeOfBackground: 30vh;
   }
 
   .content {
-    transform: translateY(100vh);
+    opacity: 0;
   }
 }
 </style>
