@@ -21,15 +21,28 @@ export default defineComponent({
       screenplay: {
         scenes: [
           {
-            componentName: 'FadeInfo',
-            props: {},
+            componentName: 'TitleWithSub',
+            props: {
+              title: 'Directed By',
+              subtitle: 'Milaboras Astranica',
+            },
+          },
+          {
+            componentName: 'TitleWithSub',
+            props: {
+              title: 'Script by',
+              subtitle: 'Kevin Feige',
+            },
+          },
+          {
+            componentName: 'TitleWithSub',
+            props: {
+              title: 'Director of Photography',
+              subtitle: 'Don Burgess, A.S.C.',
+            },
           },
           {
             componentName: 'Credits',
-            props: {},
-          },
-          {
-            componentName: 'FadeInfo',
             props: {},
           },
         ],

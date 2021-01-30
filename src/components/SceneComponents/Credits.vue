@@ -53,12 +53,10 @@ export default {
       console.log(divWrap.scrollHeight);
       divContent.style.opacity = 1;
       const animationSeconds = secondsPerNumberOfPixels(distanceToRoll, pixelsPerSeconds);
-      console.log(animationSeconds);
       divContent.style.transition = `${animationSeconds}s transform linear`;
       divContent.style.transform = `translateY(-${endPosition}px)`;
 
       setTimeout(() => {
-        console.log('Done animation.....');
         props.goToNextScene();
       }, parseInt(animationSeconds * 1000, 10));
     });

@@ -1,21 +1,20 @@
 <template>
   <component
+    v-if="currentScene"
     :is="currentScene.componentName"
     v-bind="currentScene.props"
     :goToNextScene="goToNextScene"
   />
+  <div v-else></div>
 </template>
 
 <script>
 import { ref } from 'vue';
-import Credits from './Credits.vue';
+import * as components from './SceneComponents';
 import FadeInfo from './FadeInfo.vue';
 
 export default {
-  components: {
-    Credits,
-    FadeInfo,
-  },
+  components,
   props: {
     screenplay: Object,
   },
@@ -25,8 +24,11 @@ export default {
     const currentScene = ref(scenes[0]);
 
     const goToNextScene = () => {
-      currentSceneId.value += 1;
-      currentScene.value = scenes[currentSceneId.value];
+      currentScene.value = null; // Force remove component
+      process.nextTick(() => {
+        currentSceneId.value += 1;
+        currentScene.value = scenes[currentSceneId.value];
+      });
     };
 
     return {
