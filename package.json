@@ -1,7 +1,8 @@
 {
   "name": "kreditoj",
   "version": "0.1.0",
-  "private": true,
+  "main": "dist/Kreditoj.umd.js",
+  "unpkg": "dist/Kreditoj.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
