@@ -4,7 +4,10 @@
     'title--small': isSmall,
     'title--large': isLarge,
   }">
-    <slot></slot>
+    <slot v-if="title === ''"></slot>
+    <v-else>
+      {{title}}
+    </v-else>
   </div>
 </template>
 
@@ -34,6 +37,10 @@ export default {
     isSmall: {
       type: Boolean,
       default: false,
+    },
+    title: {
+      type: String,
+      default: '',
     },
   },
 };

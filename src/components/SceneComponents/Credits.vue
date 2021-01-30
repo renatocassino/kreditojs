@@ -1,20 +1,12 @@
 <template>
   <div ref="wrap" class="wrap">
     <div ref="content" class="content">
-      <Title>Cast</Title>
-      <side-by-side :values="values" />
-
-      <Title>External Support</Title>
-
-      <simple-line>Jovani Jerde</simple-line>
-      <simple-line>Raheem Hoeger</simple-line>
-      <simple-line>Alec Runte</simple-line>
-      <simple-line>Wolf Raynor</simple-line>
-      <simple-line>Edgardo Lang</simple-line>
-      <simple-line>Garnett Marquis</simple-line>
-      <simple-line>Maverick Fay</simple-line>
-      <simple-line>Murray Mossie Route</simple-line>
-      <simple-line>Demond Schimmel</simple-line>
+      <component
+        v-for="component in components"
+        v-bind:key="JSON.stringify(component)"
+        v-bind="component.props"
+        :is="component.componentName"
+      />
     </div>
   </div>
 </template>
@@ -24,6 +16,7 @@ import { ref, onMounted } from 'vue';
 import Title from '@/components/Title.vue';
 import SideBySide from '@/components/SideBySide.vue';
 import SimpleLine from '@/components/SimpleLine.vue';
+import SimpleList from '@/components/SimpleList.vue';
 import { secondsPerNumberOfPixels } from '@/helpers/sliderCalcs';
 
 const pixelsPerSeconds = 60;
@@ -33,9 +26,13 @@ export default {
     Title,
     SideBySide,
     SimpleLine,
+    SimpleList,
   },
   props: {
     goToNextScene: Function,
+    components: {
+      type: Array,
+    },
   },
   setup(props) {
     const content = ref(null);
@@ -64,15 +61,6 @@ export default {
     return {
       content,
       wrap,
-      values: [
-        ['Design', ['Felipe Luize', 'Anna Waack']],
-        ['Development', ['Renato Cassino', 'Igor Canedo', 'Lages', 'João Paulo']],
-        ['Sound Producer', 'Molla (Carlos Cassino)'],
-        ['P.O.', 'Juliana Soraes'],
-        ['S.M.', 'Lilian'],
-        ['Python GOD', 'Alen'],
-        ['Dess Code Reference', 'Gustav'],
-      ],
     };
   },
 };
