@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import App from './App.vue';
+import Kreditoj from './Kreditoj.vue';
 import './registerServiceWorker';
 
-createApp(App).mount('#app');
+createApp(Kreditoj).mount('#app');
