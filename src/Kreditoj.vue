@@ -1,17 +1,40 @@
 <template>
   <div class="credits-app">
-    <Credits />
+    <!-- <Credits /> -->
+    <scenes :screenplay="screenplay" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Credits from './components/Credits.vue';
+import Scenes from './components/Scenes.vue';
+// import Credits from './components/Credits.vue';
 
 export default defineComponent({
-  name: 'App',
+  name: 'Kreditoj',
   components: {
-    Credits,
+    Scenes,
+    // Credits,
+  },
+  setup() {
+    return {
+      screenplay: {
+        scenes: [
+          {
+            componentName: 'FadeInfo',
+            props: {},
+          },
+          {
+            componentName: 'Credits',
+            props: {},
+          },
+          {
+            componentName: 'FadeInfo',
+            props: {},
+          },
+        ],
+      },
+    };
   },
 });
 </script>

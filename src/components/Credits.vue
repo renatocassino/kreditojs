@@ -34,7 +34,10 @@ export default {
     SideBySide,
     SimpleLine,
   },
-  setup() {
+  props: {
+    goToNextScene: Function,
+  },
+  setup(props) {
     const content = ref(null);
     const wrap = ref(null);
 
@@ -49,8 +52,15 @@ export default {
       divContent.style.transform = `translateY(${startPosition}px)`;
       console.log(divWrap.scrollHeight);
       divContent.style.opacity = 1;
-      divContent.style.transition = `${secondsPerNumberOfPixels(distanceToRoll, pixelsPerSeconds)}s transform linear`;
+      const animationSeconds = secondsPerNumberOfPixels(distanceToRoll, pixelsPerSeconds);
+      console.log(animationSeconds);
+      divContent.style.transition = `${animationSeconds}s transform linear`;
       divContent.style.transform = `translateY(-${endPosition}px)`;
+
+      setTimeout(() => {
+        console.log('Done animation.....');
+        props.goToNextScene();
+      }, parseInt(animationSeconds * 1000, 10));
     });
 
     return {
