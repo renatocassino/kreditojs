@@ -8,6 +8,6 @@
   .title {
     font-size: 24px;
     font-weight: 600;
-    margin: 1.5rem 0;
+    margin: 2rem 0 1.5rem;
   }
 </style>

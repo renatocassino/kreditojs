@@ -1,5 +1,7 @@
 <template>
-  <Credits />
+  <div class="credits-app">
+    <Credits />
+  </div>
 </template>
 
 <script lang="ts">
@@ -20,7 +22,7 @@ body {
   margin: 0;
 }
 
-#app {
+.credits-app {
   font-family: Saira, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

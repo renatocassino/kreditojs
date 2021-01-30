@@ -2,19 +2,19 @@
   <div ref="wrap" class="wrap">
     <div ref="content" class="content">
       <Title>Cast</Title>
-      <centered-data :values="values" />
+      <side-by-side :values="values" />
 
       <Title>External Support</Title>
 
-      <div>Jovani Jerde</div>
-      <div>Raheem Hoeger</div>
-      <div>Alec Runte</div>
-      <div>Wolf Raynor</div>
-      <div>Edgardo Lang</div>
-      <div>Garnett Marquis</div>
-      <div>Maverick Fay</div>
-      <div>Murray Mossie Route</div>
-      <div>Demond Schimmel</div>
+      <simple-line>Jovani Jerde</simple-line>
+      <simple-line>Raheem Hoeger</simple-line>
+      <simple-line>Alec Runte</simple-line>
+      <simple-line>Wolf Raynor</simple-line>
+      <simple-line>Edgardo Lang</simple-line>
+      <simple-line>Garnett Marquis</simple-line>
+      <simple-line>Maverick Fay</simple-line>
+      <simple-line>Murray Mossie Route</simple-line>
+      <simple-line>Demond Schimmel</simple-line>
     </div>
   </div>
 </template>
@@ -22,7 +22,8 @@
 <script>
 import { ref, onMounted } from 'vue';
 import Title from '@/components/Title.vue';
-import CenteredData from '@/components/CenteredData.vue';
+import SideBySide from '@/components/SideBySide.vue';
+import SimpleLine from '@/components/SimpleLine.vue';
 import { secondsPerNumberOfPixels } from '@/helpers/sliderCalcs';
 
 const pixelsPerSeconds = 60;
@@ -30,7 +31,8 @@ const pixelsPerSeconds = 60;
 export default {
   components: {
     Title,
-    CenteredData,
+    SideBySide,
+    SimpleLine,
   },
   setup() {
     const content = ref(null);
