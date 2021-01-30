@@ -34,7 +34,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 <html>
 <head>
-    <link rel="stylesheet" href="http://cdn....../Kreditoj.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kreditoj@0.1.0/dist/Kreditoj.css" />
     <title>Credits | Powered by Kreditoj</title>
 </head>
 
@@ -42,7 +42,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     <div id="app"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5/dist/vue.global.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5/dist/Kreditoj.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kreditoj@0.1.0/dist/Kreditoj.umd.min.js"></script>
 
     <script>
     window.Vue.createApp(window.Kreditoj).mount('#app');
