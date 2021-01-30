@@ -8,13 +8,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Scenes from './components/Scenes.vue';
-// import Credits from './components/Credits.vue';
 
 export default defineComponent({
   name: 'Kreditoj',
   components: {
     Scenes,
-    // Credits,
   },
   setup() {
     return {
@@ -54,12 +52,15 @@ export default defineComponent({
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap');
+
+@import "./scss/_variables.scss";
+
 body {
   margin: 0;
 }
 
 .credits-app {
-  font-family: Saira, Helvetica, Arial, sans-serif;
+  font-family: $font-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: default;

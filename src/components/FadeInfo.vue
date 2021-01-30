@@ -6,7 +6,6 @@
 
 <script>
 import { onMounted, ref } from 'vue';
-import Title from './Title.vue';
 
 export default {
   props: {
