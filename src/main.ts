@@ -9,6 +9,19 @@ import './registerServiceWorker';
       props: {
         components: [
           {
+            componentName: 'ListColumns',
+            props: {
+              columns: 2,
+              lines: [
+                'Lorem',
+                'Ipsum',
+                'Sit',
+                'Dolor',
+                'Amet',
+              ],
+            },
+          },
+          {
             componentName: 'Text',
             props: {
               text: 'Cast',
