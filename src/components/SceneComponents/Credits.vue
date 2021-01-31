@@ -13,21 +13,13 @@
 
 <script>
 import { ref, onMounted } from 'vue';
-import Title from '@/components/Title.vue';
-import SimpleLine from '@/components/SimpleLine.vue';
-import SimpleList from '@/components/SimpleList.vue';
 import { secondsPerNumberOfPixels } from '@/helpers/sliderCalcs';
 import * as components from '../atomic';
 
 const pixelsPerSeconds = 60;
 
 export default {
-  components: {
-    Title,
-    SimpleLine,
-    SimpleList,
-    ...components,
-  },
+  components,
   props: {
     goToNextScene: Function,
     components: {
