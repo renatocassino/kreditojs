@@ -82,6 +82,99 @@ This code will generate the image bellow:
 
 <img src="https://github.com/tacnoman/kreditoj/raw/master/data/title-with-subtitle.gif" alt="example of title with sub" />
 
+### Example of component `Credits`
+
+The component `Credits` has an attribute to add in props called `components`. This attributes works like `scenes`, because you must add multiple components inside.
+
+The child components to `Credits` is:
+
+1. Title
+2. SideBySide
+3. SimpleList
+
+The component `Title` has just a prop attribute called `title`.
+
+Ex:
+```js
+  window.screenplay = {
+    scenes: [
+      {
+        componentName: 'Credits',
+        props: {
+          components: [
+            {
+              componentName: 'Title',
+              props: {
+                title: 'Cast',
+              },
+            },
+            // ......
+```
+
+The component `SideBySide` has a prop called `values` with an array of arrays.
+The first value of each array will be place in left size. The second value will be placed in the right side.
+If the second attribute is an array, will be place a list instead of a unique text.
+
+Ex:
+```js
+  window.screenplay = {
+    scenes: [
+      {
+        componentName: 'Credits',
+        props: {
+          components: [
+            {
+              componentName: 'SideBySide',
+              props: {
+                values: [
+                    ['Design', ['Roth Wigfall', 'Gledstane Shirlee']],
+                    ['Development', ['Kaitlynn Saleway', 'Higgan Lincoln', 'Marshall Willcott', 'Shepperd Caltera']],
+                    ['P.M.', 'Winnifred Tackle'],
+                    ['P.O.', 'Tandy Huggons'],
+                    ['S.M.', 'Manya Alti'],
+                    ['Big data', 'Godfry Orae'],
+                    ['Dess Code Reference', 'Cassandry Donson'],
+                  ],
+                },
+              },
+            },
+            // ....
+```
+
+Another component is the `SimpleList`. Has a prop called `lines` with an array of string.
+
+Ex:
+```js
+  window.screenplay = {
+    scenes: [
+      {
+        componentName: 'Credits',
+        props: {
+          components: [
+            {
+              componentName: 'SimpleList',
+              props: {
+                lines: [
+                    'Jovani Jerde',
+                    'Raheem Hoeger',
+                    'Alec Runte',
+                    'Wolf Raynor',
+                    'Edgardo Lang',
+                    'Garnett Marquis',
+                    'Maverick Fay',
+                    'Murray Mossie Route',
+                    'Demond Schimmel',
+                  ],
+                },
+              },
+            },
+            // ....
+```
+
+You can see theese three examples in gif bellow:
+
+<img src="https://github.com/tacnoman/kreditoj/raw/master/data/slider-credits.gif" alt="credits like a slider" />
+
 # Running project using Vue
 
 ## Project setup
@@ -135,6 +228,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 </body>
 ```
 
-### Example result
+### Full example result
 
 <img src="https://github.com/tacnoman/kreditoj/raw/master/data/credits.gif" alt="example" />
