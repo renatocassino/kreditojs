@@ -12,13 +12,17 @@
 <script>
 import { ref } from 'vue';
 import * as components from './SceneComponents';
+import * as atomic from './atomic';
 
 const restartComponent = {
   componentName: '_Restart',
 };
 
 export default {
-  components,
+  components: {
+    ...components,
+    ...atomic,
+  },
   props: {
     screenplay: Object,
   },
@@ -36,7 +40,7 @@ export default {
     };
 
     const goToNextScene = () => {
-      currentScene.value = null; // Force remove component
+      currentScene.value = null; // Force remove component to start css animation
       process.nextTick(() => {
         currentSceneId.value += 1;
 
