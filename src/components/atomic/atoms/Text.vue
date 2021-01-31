@@ -20,6 +20,11 @@
       font-weight: 600;
     }
 
+    &--medium-light {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
     &--subtitle {
       font-size: 24px;
       font-weight: 600;

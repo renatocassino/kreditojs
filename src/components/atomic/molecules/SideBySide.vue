@@ -2,12 +2,13 @@
   <div class="wrapper">
     <div class="centered" v-for="[ left, right ] in values" v-bind:key="left">
       <div class="centered__left">
-        <Text :type="subtitle" :text="left" />
+        <Text type="subtitle" :text="left" />
       </div>
       <div class="centered__right">
         <Text
           v-for="rightItem in (typeof right === 'string' ? [right] : right)"
           v-bind:key="rightItem"
+          type="medium-light"
           :text="rightItem"
         />
       </div>
