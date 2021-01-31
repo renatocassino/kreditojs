@@ -1,0 +1,90 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kreditoj@0.2.1/dist/Kreditoj.css" />
+  <title>Credits | Powered by Kreditoj</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5/dist/vue.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/kreditoj@0.2.1/dist/Kreditoj.umd.min.js"></script>
+
+  <script>
+    window.screenplay = {
+      scenes: [
+        {
+          componentName: 'Credits',
+          props: {
+            components: [
+              {
+                componentName: 'Title',
+                props: {
+                  title: 'Cast',
+                },
+              },
+              {
+                componentName: 'SideBySide',
+                props: {
+                  values: [
+                    ['Design', ['Roth Wigfall', 'Gledstane Shirlee']],
+                    ['Development', ['Kaitlynn Saleway', 'Higgan Lincoln', 'Marshall Willcott', 'Shepperd Caltera']],
+                    ['P.M.', 'Winnifred Tackle'],
+                    ['P.O.', 'Tandy Huggons'],
+                    ['S.M.', 'Manya Alti'],
+                    ['Big data', 'Godfry Orae'],
+                    ['Dess Code Reference', 'Cassandry Donson'],
+                  ],
+                },
+              },
+              {
+                componentName: 'Title',
+                props: {
+                  title: 'External Support',
+                },
+              },
+              {
+                componentName: 'SimpleList',
+                props: {
+                  lines: [
+                    'Jovani Jerde',
+                    'Raheem Hoeger',
+                    'Alec Runte',
+                    'Wolf Raynor',
+                    'Edgardo Lang',
+                    'Garnett Marquis',
+                    'Maverick Fay',
+                    'Murray Mossie Route',
+                    'Demond Schimmel',
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          componentName: 'TitleWithSub',
+          props: {
+            title: 'Directed By',
+            subtitle: 'Milaboras Astranica',
+          },
+        },
+        {
+          componentName: 'TitleWithSub',
+          props: {
+            title: 'Script by',
+            subtitle: 'Kevin Aldric',
+          },
+        },
+        {
+          componentName: 'TitleWithSub',
+          props: {
+            title: 'Director of Photography',
+            subtitle: 'Don Burgess, A.S.C.',
+          },
+        },
+      ],
+    };
+    window.Vue.createApp(window.Kreditoj).mount('#app');
+  </script>
+</body>
