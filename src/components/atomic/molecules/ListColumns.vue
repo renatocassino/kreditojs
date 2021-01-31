@@ -16,8 +16,10 @@
   &__wrapper {
     display: flex;
     flex-basis: 50%;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 30%;
 
     &--columns-2 {
       .list-columns__column {

@@ -9,16 +9,42 @@ import './registerServiceWorker';
       props: {
         components: [
           {
+            componentName: 'Text',
+            props: {
+              text: 'Alguma coisa de rodapé e assinatura para quando necessário, alguma coisa de rodapé e assinatura para quando necessário, alguma coisa de rodapé e assinatura para quando necessário, alguma coisa de rodapé e assinatura para quando necessário.',
+              type: 'multiline',
+            },
+          },
+          {
+            componentName: 'Text',
+            props: {
+              text: 'Other important mentions',
+              type: 'title',
+            },
+          },
+          {
+            componentName: 'Space',
+            props: {
+              size: 'medium',
+            },
+          },
+          {
             componentName: 'ListColumns',
             props: {
               columns: 2,
               lines: [
-                'Lorem',
-                'Ipsum',
-                'Sit',
-                'Dolor',
-                'Amet',
+                'Mat Robert',
+                'Andrew Macfeller',
+                'Mine Laboras',
+                'Sunosun Labaril',
+                'Planex Space',
               ],
+            },
+          },
+          {
+            componentName: 'Space',
+            props: {
+              size: 'large',
             },
           },
           {

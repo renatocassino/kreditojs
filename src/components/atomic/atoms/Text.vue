@@ -39,6 +39,11 @@
       font-size: 40px;
       font-weight: 600;
     }
+
+    &--multiline {
+      font-weight: 400;
+      padding: 0 40%;
+    }
   }
 </style>
 
