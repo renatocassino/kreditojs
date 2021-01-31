@@ -1,0 +1,90 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kreditoj@0.2.1/dist/Kreditoj.css" />
+  <title>Credits | Powered by Kreditoj</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5/dist/vue.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/kreditoj@0.2.1/dist/Kreditoj.umd.min.js"></script>
+
+  <script>
+    window.screenplay = {
+      scenes: [
+        {
+          componentName: 'TitleWithSub',
+          props: {
+            title: 'Developed by',
+            subtitle: 'Cassino Tacnoman',
+          },
+        },
+        {
+          componentName: 'TitleWithSub',
+          props: {
+            title: 'Scripted by',
+            subtitle: 'Cassino Renato',
+          },
+        },
+        {
+          componentName: 'TitleWithSub',
+          props: {
+            title: 'Design of project',
+            subtitle: 'Renato Cassino',
+          },
+        },
+        {
+          componentName: 'Credits',
+          props: {
+            components: [
+              {
+                componentName: 'Title',
+                props: {
+                  title: 'Cast',
+                },
+              },
+              {
+                componentName: 'SideBySide',
+                props: {
+                  values: [
+                    ['Design', ['Renato Cassino',]],
+                    ['Development', ['Renato Cassino', 'Tacnoman', 'Cassino Tacno']],
+                    ['P.M.', 'Cassino Renato'],
+                    ['P.O.', 'Renato Cassino'],
+                    ['Director of art', 'Cassinoman Renato'],
+                    ['Font', 'Saria'],
+                    ['Dess Code Reference', 'Renato Cassino'],
+                  ],
+                },
+              },
+              {
+                componentName: 'Title',
+                props: {
+                  title: 'External Support',
+                },
+              },
+              {
+                componentName: 'SimpleList',
+                props: {
+                  lines: [
+                    'Renato Cassino',
+                    'Tacnoman',
+                    'Mullets',
+                    'Wolf Raynor',
+                    'Grilo Boy',
+                    'Pika Mc',
+                    'Branco Bill',
+                    'Kapi',
+                    'Peter Park Depressed',
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    };
+    window.Vue.createApp(window.Kreditoj).mount('#app');
+  </script>
+</body>
