@@ -1,7 +1,9 @@
 <template>
   <fade-info :goToNextScene="goToNextScene">
-    <div class="title">{{title}}</div>
-    <div class="subtitle">{{subtitle}}</div>
+    <div>
+      <div class="title">{{title}}</div>
+      <div class="subtitle">{{subtitle}}</div>
+    </div>
   </fade-info>
 </template>
 

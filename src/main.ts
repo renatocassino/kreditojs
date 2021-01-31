@@ -9,10 +9,23 @@ import './registerServiceWorker';
       props: {
         components: [
           {
+            componentName: 'Image',
+            props: {
+              url: 'https://lh3.googleusercontent.com/proxy/KGAKSIh5nKBqDL-cCMgxkHV1jmc_1i4005f_qpRFkNKYMXJbuVFtrAAwkXnpSStX7faXxMbsaqO4LThC6N-g8bpyAo8WzIDxPAIJFXUJHqvqODpCaxb-70jzI35Bn41NSMtQ',
+              alt: 'Logo Vue',
+            },
+          },
+          {
             componentName: 'Text',
             props: {
               text: 'Alguma coisa de rodapé e assinatura para quando necessário, alguma coisa de rodapé e assinatura para quando necessário, alguma coisa de rodapé e assinatura para quando necessário, alguma coisa de rodapé e assinatura para quando necessário.',
               type: 'multiline',
+            },
+          },
+          {
+            componentName: 'Space',
+            props: {
+              size: 'large',
             },
           },
           {
