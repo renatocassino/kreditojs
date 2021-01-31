@@ -1,12 +1,15 @@
 <template>
   <div class="wrapper">
     <div class="centered" v-for="[ left, right ] in values" v-bind:key="left">
-      <div class="centered__left">{{left}}</div>
-      <div class="centered__right" v-if="typeof right === 'string'">{{right}}</div>
-      <div class="centered__right" v-if="Array.isArray(right)">
-        <div v-for="rightItem in right" v-bind:key="rightItem">
-          {{rightItem}}
-        </div>
+      <div class="centered__left">
+        <Text :type="subtitle" :text="left" />
+      </div>
+      <div class="centered__right">
+        <Text
+          v-for="rightItem in (typeof right === 'string' ? [right] : right)"
+          v-bind:key="rightItem"
+          :text="rightItem"
+        />
       </div>
     </div>
   </div>
@@ -24,8 +27,8 @@
 
   &__left {
     text-align: right;
-    font-weight: 600;
     align-self: flex-start;
+    font-weight: bold;
   }
 
   &__right {
@@ -36,9 +39,14 @@
 </style>
 
 <script>
+import { Text } from '@/components/atomic';
+
 export default {
   props: {
     values: Array,
+  },
+  components: {
+    Text,
   },
 };
 </script>

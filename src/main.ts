@@ -9,9 +9,16 @@ import './registerServiceWorker';
       props: {
         components: [
           {
-            componentName: 'Title',
+            componentName: 'Text',
             props: {
-              title: 'Cast',
+              text: 'Cast',
+              type: 'title',
+            },
+          },
+          {
+            componentName: 'Space',
+            props: {
+              size: 'medium',
             },
           },
           {
@@ -29,9 +36,22 @@ import './registerServiceWorker';
             },
           },
           {
-            componentName: 'Title',
+            componentName: 'Space',
             props: {
-              title: 'External Support',
+              size: 'large',
+            },
+          },
+          {
+            componentName: 'Text',
+            props: {
+              text: 'External Support',
+              type: 'title',
+            },
+          },
+          {
+            componentName: 'Space',
+            props: {
+              size: 'medium',
             },
           },
           {

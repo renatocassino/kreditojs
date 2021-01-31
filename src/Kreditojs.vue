@@ -24,6 +24,8 @@ export default defineComponent({
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap');
+/** Import futura here */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
 
 @import "./scss/_variables.scss";
 

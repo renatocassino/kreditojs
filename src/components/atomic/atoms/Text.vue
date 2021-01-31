@@ -1,8 +1,7 @@
 <template>
   <div :class="{
     text: true,
-    'text--small': isSmall,
-    'text--large': isLarge,
+    [`text--${type}`]: true,
   }">
     <slot v-if="text === ''"></slot>
     <v-else>
@@ -15,14 +14,25 @@
   .text {
     font-size: 24px;
     font-weight: 600;
-    margin: 2rem 0 1.5rem;
 
-    &--small {
-      font-size: 16px;
+    &--title {
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    &--subtitle {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    &--text {
+      font-size: 20px;
+      font-weight: 400;
     }
 
     &--large {
       font-size: 40px;
+      font-weight: 600;
     }
   }
 </style>
@@ -30,13 +40,9 @@
 <script>
 export default {
   props: {
-    isLarge: {
-      type: Boolean,
-      default: false,
-    },
-    isSmall: {
-      type: Boolean,
-      default: false,
+    type: {
+      type: String,
+      default: 'text',
     },
     text: {
       type: String,
