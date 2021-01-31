@@ -10,7 +10,7 @@ import { defineComponent } from 'vue';
 import Scenes from './components/Scenes.vue';
 
 export default defineComponent({
-  name: 'Kreditoj',
+  name: 'Kreditojs',
   components: {
     Scenes,
   },

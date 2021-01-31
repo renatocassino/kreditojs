@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import Kreditoj from './Kreditoj.vue';
+import Kreditojs from './Kreditojs.vue';
 import './registerServiceWorker';
 
 (window as any).screenplay = {
@@ -77,4 +77,4 @@ import './registerServiceWorker';
   ],
 };
 
-createApp(Kreditoj).mount('#app');
+createApp(Kreditojs).mount('#app');

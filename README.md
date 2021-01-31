@@ -1,46 +1,46 @@
-# Kreditoj
+# KreditoJS
 
-[![](https://data.jsdelivr.com/v1/package/npm/kreditoj/badge)](https://www.jsdelivr.com/package/npm/kreditoj)
+[![](https://data.jsdelivr.com/v1/package/npm/kreditojs/badge)](https://www.jsdelivr.com/package/npm/kreditojs)
 
 ## The idea
 
-Kreditoj (means "credits" in [esperanto](https://en.wikipedia.org/wiki/Esperanto)) is a really simple lib to create a credits page with team development and publish in easy way. Is like a credits in a final of the movie.
+KreditoJS ("Kreditoj" means "credits" in [esperanto](https://en.wikipedia.org/wiki/Esperanto)) is a really simple lib to create a credits page with team development and publish in easy way. Is like a credits in a final of the movie.
 
 You can see an example at final of this readme.
 
 ## Usage
 
-This lib was created using Vue in version 3. You can just import the vue lib, the Kreditoj lib and use. See an example bellow:
+This lib was created using Vue in version 3. You can just import the vue lib, the KreditoJS lib and use. See an example bellow:
 
 ```html
 <html>
 <head>
     <!-- Import the stylesheet bellow -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kreditoj@latest/dist/Kreditoj.css" />
-    <title>Credits | Powered by Kreditoj</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kreditojs@latest/dist/Kreditojs.css" />
+    <title>Credits | Powered by KreditoJS</title>
 </head>
 
 <body>
     <!-- div with id to render the component -->
     <div id="app"></div>
 
-    <!-- Import vue lib and kreditoj -->
+    <!-- Import vue lib and kreditojs -->
     <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5/dist/vue.global.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/kreditoj@latest/dist/Kreditoj.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kreditojs@latest/dist/Kreditojs.umd.min.js"></script>
 
     <script>
         <!-- Configuration and instance. More details about configuration bellow -->
-        window.screenplay = { /* .... */ }; // You can see examples here: https://github.com/tacnoman/kreditoj/tree/master/examples
-        window.Vue.createApp(window.Kreditoj).mount('#app');
+        window.screenplay = { /* .... */ }; // You can see examples here: https://github.com/tacnoman/kreditojs/tree/master/examples
+        window.Vue.createApp(window.Kreditojs).mount('#app');
     </script>
 </body>
 ```
 
-You must set the variable `window.screenplay` with credits configuration to Kreditoj render with your data.
+You must set the variable `window.screenplay` with credits configuration to Kreditojs render with your data.
 
 ## Creating the variable `screenplay`
 
-The Kreditoj uses this variable to create components. There are some types of components:
+The Kreditojs uses this variable to create components. There are some types of components:
 
 1. TitleWithSub - A component that appear with a title and a subtitle
 2. Credits - Credits as a slider rolling to up.
@@ -80,7 +80,7 @@ window.screenplay = {
 
 This code will generate the image bellow:
 
-<img src="https://github.com/tacnoman/kreditoj/raw/master/data/title-with-subtitle.gif" alt="example of title with sub" />
+<img src="https://github.com/tacnoman/kreditojs/raw/master/data/title-with-subtitle.gif" alt="example of title with sub" />
 
 ### Example of component `Credits`
 
@@ -173,7 +173,7 @@ Ex:
 
 You can see theese three examples in gif bellow:
 
-<img src="https://github.com/tacnoman/kreditoj/raw/master/data/slider-credits.gif" alt="credits like a slider" />
+<img src="https://github.com/tacnoman/kreditojs/raw/master/data/slider-credits.gif" alt="credits like a slider" />
 
 # Running project using Vue
 
@@ -202,32 +202,6 @@ yarn test:unit
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-### Simple usage with credits.html
-
-```
-<html>
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kreditoj@0.2.1/dist/Kreditoj.css" />
-    <title>Credits | Powered by Kreditoj</title>
-</head>
-
-<body>
-    <div id="app"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5/dist/vue.global.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/kreditoj@0.2.1/dist/Kreditoj.umd.min.js"></script>
-
-    <script>
-    window.screenplay = { /* .... */ }; // You can see examples here: https://github.com/tacnoman/kreditoj/tree/master/examples
-    window.Vue.createApp(window.Kreditoj).mount('#app');
-    </script>
-</body>
-```
-
 ### Full example result
 
-<img src="https://github.com/tacnoman/kreditoj/raw/master/data/credits.gif" alt="example" />
+<img src="https://github.com/tacnoman/kreditojs/raw/master/data/credits.gif" alt="example" />

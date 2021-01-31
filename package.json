@@ -1,14 +1,14 @@
 {
-  "name": "kreditoj",
+  "name": "kreditojs",
   "version": "0.2.1",
-  "main": "dist/Kreditoj.umd.js",
-  "unpkg": "dist/Kreditoj.min.js",
+  "main": "dist/Kreditojs.umd.js",
+  "unpkg": "dist/Kreditojs.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "package": "vue-cli-service build --target lib --name Kreditoj src/Kreditoj.vue"
+    "package": "vue-cli-service build --target lib --name Kreditojs src/Kreditojs.vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",
