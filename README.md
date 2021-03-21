@@ -29,7 +29,7 @@ This lib was created using Vue in version 3. You can just import the vue lib, th
     <script src="https://cdn.jsdelivr.net/npm/kreditojs@latest/dist/Kreditojs.umd.min.js"></script>
 
     <script>
-        <!-- Configuration and instance. More details about configuration bellow -->
+        // Configuration and instance. More details about configuration bellow
         window.screenplay = { /* .... */ }; // You can see examples here: https://github.com/tacnoman/kreditojs/tree/master/examples
         window.Vue.createApp(window.Kreditojs).mount('#app');
     </script>
